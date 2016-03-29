@@ -56,7 +56,7 @@ Template.app.helpers({
   },
   fastoUrl() {
     if (!this) return undefined;
-    return 'http://fastosphere.meteor.com/' + this;
+    return 'https://atmospherejs.com/?q=' + this;
   },
   fullUrl(url) {
     if (url && url.indexOf('http') !== 0) return 'http://' + url;
