@@ -23,6 +23,7 @@ ddp-common@1.2.2
 ddp-rate-limiter@1.0.0
 ddp-server@1.2.2
 deps@1.0.9
+dfischer:phantomjs@1.0.4
 diff-sequence@1.0.1
 ecmascript@0.1.6
 ecmascript-runtime@0.2.6
@@ -63,6 +64,7 @@ mongo-id@1.0.1
 npm-bcrypt@0.7.8_2
 npm-mongo@1.4.39_1
 observe-sequence@1.0.7
+ongoworks:spiderable@1.0.7
 ordered-dict@1.0.4
 promise@0.5.1
 random@1.0.5
@@ -77,7 +79,6 @@ session@1.1.1
 sha@1.0.4
 spacebars@1.0.7
 spacebars-compiler@1.0.7
-spiderable@1.0.9
 srp@1.0.4
 standard-minifiers@1.0.2
 templating@1.1.5

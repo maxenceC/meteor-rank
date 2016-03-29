@@ -26,4 +26,6 @@ ejson
 spacebars
 check
 ecmascript
-spiderable
+
+ongoworks:spiderable
+dfischer:phantomjs
