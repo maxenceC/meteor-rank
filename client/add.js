@@ -1,5 +1,3 @@
-Router.route('add');
-
 Template.add.events({
   'submit .newApps'(event) {
     let apps = event.target.textarea.value;

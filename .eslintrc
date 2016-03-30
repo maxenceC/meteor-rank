@@ -273,6 +273,7 @@
     "Apps": true,
     "alexaUpdate": true,
     "rankUpdate": true,
+    "sitemaps": true,
     "meteorUpdate": true,
     "Packages": true,
 
