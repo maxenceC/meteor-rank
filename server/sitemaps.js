@@ -10,6 +10,9 @@ sitemaps.add('/sitemap.xml', function () {
     }, {
         page: '/bad',
         changefreq: 'weekly'
+    }, {
+        page: '/packages',
+        changefreq: 'weekly'
     }
     ];
 });

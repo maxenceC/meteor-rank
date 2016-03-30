@@ -1,4 +1,5 @@
 Meteor.publish('packages', () => {
+  Packages.find({}, { sort: { rank: 1 }, limit: 50 });
   return Packages.find({}, { sort: { rank: 1 }, limit: 50 });
 });
 
@@ -21,7 +22,7 @@ const packagesRankUpdate = () => {
   packages = _.map(packages, (count, name) => { return { name, count }; });
   packages = _.sortBy(packages, (p) => { return -p.count; });
 
-  // console.log('res', packages);
+  console.log('res', packages);
 
   Packages.remove({});
   let r = 0;
@@ -31,6 +32,7 @@ const packagesRankUpdate = () => {
       r++;
       count = p.count;
     }
+    console.log('inserting : '+p.name);
     Packages.insert({ name: p.name.replace('#', ':'), count: p.count, rank: r, percent: (100.0 * count / appCount) | 0 });
   });
 

@@ -14,6 +14,7 @@ Router.route('bad', {
 
 Router.route('packages', {
     data() {
+        console.log(Packages.find({}, {sort: {rank: 1}}).fetch());
         return Packages.find({}, {sort: {rank: 1}});
     },
     waitOn() {
