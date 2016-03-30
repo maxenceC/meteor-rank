@@ -2,17 +2,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
         ga('create', 'UA-75696830-1', 'auto');
         ga('send', 'pageview');
 
     </script>
     <script type="text/javascript">
-        window.heap=window.heap||[],heap.load=function(t,e){window.heap.appid=t,window.heap.config=e;var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.heapanalytics.com/js/heap.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(t){return function(){heap.push([t].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+        window.heap = window.heap || [], heap.load = function (t, e) {
+            window.heap.appid = t, window.heap.config = e;
+            var a = document.createElement("script");
+            a.type = "text/javascript", a.async = !0, a.src = ("https:" === document.location.protocol ? "https:" : "http:") + "//cdn.heapanalytics.com/js/heap.js";
+            var n = document.getElementsByTagName("script")[0];
+            n.parentNode.insertBefore(a, n);
+            for (var o = function (t) {
+                return function () {
+                    heap.push([t].concat(Array.prototype.slice.call(arguments, 0)))
+                }
+            }, p = ["clearEventProperties", "identify", "setEventProperties", "track", "unsetEventProperty"], c = 0; c < p.length; c++)heap[p[c]] = o(p[c])
+        };
         //    heap.load("2678835518");
     </script>
 </head>
@@ -24,8 +42,12 @@
 
                 <div class="jumbotron">
                     <h1>Ranked Meteor Apps</h1>
-                    <p>Meteor Apps ranked by their Alexa score.<span class="pull-right"><a href="/add" class="btn btn-primary">Add apps</a></span></p>
-                    <input type="text" name="q" id="q" autocomplete="off" spellcheck="false" autocorrect="false" class="form-control string" placeholder="Search by app name..." />
+                    <p>Meteor Apps ranked by their Alexa score.<span class="pull-right"><a href="/add"
+                                                                                           class="btn btn-primary">Add
+                        apps</a></span></p>
+                    <p>Check out the <a href="/packages"> most popular Meteor packages here ! </a></p>
+                    <input type="text" name="q" id="q" autocomplete="off" spellcheck="false" autocorrect="false"
+                           class="form-control string" placeholder="Search by app name..."/>
                 </div>
             </div>
         </div>
@@ -35,7 +57,9 @@
 <template name="app">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <a href="{{fullUrl url}}" target="_blank"><b>{{url}}</b></a> (<a href="view-source:{{fullUrl url}}" target="_blank">html</a> | <a href="{{fullUrl meteorJS}}" target="_blank">js</a>)
+            <a href="{{fullUrl url}}" target="_blank"><b>{{url}}</b></a> (<a href="view-source:{{fullUrl url}}"
+                                                                             target="_blank">html</a> | <a
+                href="{{fullUrl meteorJS}}" target="_blank">js</a>)
       <span class="pull-right">
           {{#if meteorRank}}
               Rank: <b>{{meteorRank}}</b>
@@ -53,7 +77,8 @@
                         Alexa rank: <a href="http://www.alexa.com/siteinfo/{{url}}" target="_blank">{{rank}}</a><br>
                     {{/if}}
                     Last updated {{date}}<br>
-                    <a href="https://twitter.com/intent/tweet?text={{url}} is ranked {{meteorRank}} of all @meteorjs Apps&amp;url=http://www.rankmeteor.com/" class="btn btn-primary" target="_blank">tweet it</a><br>
+                    <a href="https://twitter.com/intent/tweet?text={{url}} is ranked {{meteorRank}} of all @meteorjs Apps&amp;url=http://www.rankmeteor.com/"
+                       class="btn btn-primary" target="_blank">tweet it</a><br>
                     <a href="#" class="btn btn-default refresh">refresh</a><br>
                     {{#if currentUser}}
                         <a href="#" class="btn btn-danger remove">remove</a><br>
@@ -118,7 +143,8 @@
     <div class="container text-muted text-center well footer">
         <div class="row">
             <div class="col-sm-offset-1 col-sm-10 col-xs-12">
-                <p>Developed by <a href="http://ploki.io">Vianney Lecroart</a> & <a href="https://twitter.com/MaxenceCornet">Maxence Cornet</a> with Meteor.</p>
+                <p>Developed by <a href="http://ploki.io">Vianney Lecroart</a> & <a
+                        href="https://twitter.com/MaxenceCornet">Maxence Cornet</a> with Meteor.</p>
                 <p><a href="https://crater.io/posts/mLdTiTZFnW3hWw3rF/ranked-meteor-apps">Discuss about it</a>.</p>
             </div>
         </div>
